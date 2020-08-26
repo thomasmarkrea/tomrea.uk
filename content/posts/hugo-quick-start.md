@@ -4,7 +4,7 @@ description = "Steps to get started with Hugo"
 categories = []
 tags = ['Hugo']
 date = 2020-08-26T18:05:49+01:00
-draft = true
+draft = false
 +++
 
 Steps to get started with Hugo.
