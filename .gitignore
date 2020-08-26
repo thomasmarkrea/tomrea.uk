@@ -1,0 +1,9 @@
+# Hugo files
+public
+resources
+
+# R project files
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata

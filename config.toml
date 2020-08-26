@@ -1,0 +1,28 @@
+baseURL = "https://tomrea.uk/"
+languageCode = "en-gb"
+title = "tomrea.uk"
+theme = ["r2hugo", "mole"]
+ignoreFiles = [ "\\.rmd$" ]
+
+[params]
+  description = "Data analysis, R and other things"
+  
+[menu]
+  [[menu.main]]
+    weight = 1
+    name = "home"
+    url = "/"
+    post = " |"
+  [[menu.main]]
+    weight = 2
+    name = "about"
+    url = "/about/"
+    post = " |"
+  [[menu.main]]
+    weight = 3
+    name = "posts"
+    url = "/posts/"
+
+[markup]
+  [markup.highlight]
+    codeFences = false

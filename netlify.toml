@@ -1,0 +1,12 @@
+[build]
+  publish = "public"
+  command = "hugo" 
+
+[build.environment]
+  HUGO_VERSION = "0.74.3"
+
+[context.draft]
+  command = "hugo -D --baseURL https://draft.tomrea.uk/"
+
+[context.dev]
+  command = "hugo --baseURL https://dev.tomrea.uk/"

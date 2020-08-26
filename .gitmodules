@@ -1,0 +1,6 @@
+[submodule "themes/mole"]
+	path = themes/mole
+	url = https://github.com/thomasmarkrea/mole.git
+[submodule "themes/r2hugo"]
+	path = themes/r2hugo
+	url = https://github.com/thomasmarkrea/r2hugo.git
