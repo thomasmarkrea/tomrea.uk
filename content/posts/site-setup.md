@@ -11,7 +11,7 @@ Additional steps to set up this site.
 
 Follows [Hugo Quick Start](/posts/hugo-quick-start/).
 
-# .gitignore
+## .gitignore
 
 Add a gitignore and push site to github
 
@@ -33,7 +33,7 @@ resources
 .Ruserdata
 ```
 
-# Archetypes
+## Archetypes
 
 Update default archetype
 
@@ -50,11 +50,11 @@ draft = true
 +++
 ```
 
-# r2hugo
+## r2hugo
 
 Install [r2hugo](https://github.com/thomasmarkrea/r2hugo) so posts can be created using R Markdown.
 
-# R Studio Project
+## R Studio Project
 
 Create R Studio project to make working with R easier
 
@@ -63,9 +63,9 @@ touch r.Rproj
 echo Version: 1.0 >> r.Rproj
 ```
 
-# Config
+## Config
 
-## Basic
+### Basic
 
 Add basic site config
 
@@ -82,7 +82,7 @@ ignoreFiles = [ "\\.rmd$" ]
   description = "Data analysis, R and other things"
 ```
 
-## Menu
+### Menu
 
 Configure site menu
 
@@ -108,7 +108,7 @@ Configure site menu
     url = "/posts/"
 ```
 
-## Markup
+### Markup
 
 Turn code highlighting off
 
@@ -122,7 +122,7 @@ Turn code highlighting off
     codeFences = false
 ```
 
-# About
+## About
 
 Create an about me page
 
@@ -130,7 +130,7 @@ Create an about me page
 hugo new about.md
 ```
 
-# Host
+## Host
 
 Host site with [Netlify](https://gohugo.io/hosting-and-deployment/hosting-on-netlify/)
 
