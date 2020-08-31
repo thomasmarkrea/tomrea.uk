@@ -148,7 +148,7 @@ touch archetypes/r2hugo/index.md
 touch archetypes/r2hugo/content.rmd
 ```
 
-[`index.md`](http://index.md) is the main file Hugo will use to create the page.
+`index.md` is the main file Hugo will use to create the page.
 
 It holds the content's front matter and the `include` shortcode.
 
@@ -187,8 +187,8 @@ When the site is built by Hugo, it will combine `index.md` with the knited `cont
 
 I may not be using them, but I wouldn't be using Hugo without them:
 
-- [https://github.com/rstudio/blogdown](https://github.com/rstudio/blogdown)
-- [https://github.com/r-lib/hugodown/](https://github.com/r-lib/hugodown/)
+- [blogdown](https://github.com/rstudio/blogdown/)
+- [hugodown](https://github.com/r-lib/hugodown/)
 
 Also, this post from rOpenSci was very useful, we seem to have been working through the same issues:
 
