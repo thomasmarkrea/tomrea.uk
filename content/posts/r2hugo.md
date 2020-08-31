@@ -62,7 +62,7 @@ content
 # content/posts/test-r2hugo-post/index.md
 
 +++
-title = "test-r2hugo-post"
+title = "Test r2hugo Post"
 description = "Post to test r2hugo"
 categories = ['test']
 tags = ['hugo', 'r']
@@ -70,7 +70,7 @@ date = 2020-01-01T13:00:00+00:00
 draft = true
 +++
 
-{{% include "posts/test-r2hugo-post/content.md" %}}
+{{%/* include "posts/test-r2hugo-post/content.md" */%}}
 ```
 
 `content.rmd` is where the actual content goes
@@ -129,7 +129,7 @@ touch layouts/shortcodes/include.html
 
 The shortcode, named `include`, is used to take the output of an R Markdown file and include it within a page. 
 
-It takes a file as input (`[.Get 0](https://gohugo.io/functions/get/)`) and outputs its contents as a string (`[readFile](https://gohugo.io/functions/readfile/)`). It treats the input as 'safe' and doesn't do any html escaping (`[safeHTML](https://gohugo.io/functions/safehtml/)`).
+It takes a file as input ([`.Get 0`](https://gohugo.io/functions/get/)) and outputs its contents as a string ([`readFile`](https://gohugo.io/functions/readfile/)). It treats the input as 'safe' and doesn't do any html escaping ([`safeHTML`](https://gohugo.io/functions/safehtml/)).
 
 ```bash
 # layouts/shortcodes/include.html
@@ -164,7 +164,7 @@ date = {{ .Date }}
 draft = true
 +++
 
-{{% include "posts/{{ .Name }}/content.md" %}}
+{{%/* include "posts/{{ .Name }}/content.md" */%}}
 ```
 
 `content.rmd` is where the R Markdown content goes.
