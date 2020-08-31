@@ -4,7 +4,7 @@ description = ""
 categories = []
 tags = ['Hugo', 'R']
 date = 2020-08-31T20:24:07+01:00
-draft = true
+draft = false
 +++
 
 Create Hugo content from R Markdown.
