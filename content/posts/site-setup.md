@@ -159,6 +159,6 @@ touch netlify.toml
 
 Use UI to set up:
 
-- [Custom Domain](https://docs.netlify.com/domains-https/custom-domains/#definitions)
-- [Deploy Contexts](https://docs.netlify.com/site-deploys/overview/#branch-deploy-controls)
+- [Custom Domain](https://docs.netlify.com/domains-https/custom-domains/)
+- [Deploy Contexts](https://docs.netlify.com/site-deploys/overview/#branches-and-deploys)
 - [Branch Subdomains](https://docs.netlify.com/domains-https/custom-domains/multiple-domains/#branch-subdomains)
