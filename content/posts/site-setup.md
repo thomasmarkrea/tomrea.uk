@@ -4,7 +4,7 @@ description = "Additional steps to set up a Hugo site"
 categories = []
 tags = ['Hugo']
 date = 2020-08-27T13:39:13+01:00
-draft = true
+draft = false
 +++
 
 Additional steps to set up this site.
