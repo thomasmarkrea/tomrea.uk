@@ -4,7 +4,7 @@ description = "A Hugo theme in four files"
 categories = []
 tags = ['Hugo']
 date = 2020-09-06T16:52:11+01:00
-draft = true
+draft = false
 +++
 
 [Mole](https://github.com/thomasmarkrea/mole) is a Hugo theme in four files
