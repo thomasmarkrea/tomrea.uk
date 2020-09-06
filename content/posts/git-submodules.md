@@ -44,7 +44,7 @@ git add .
 git commit -m 'Switch submodule to v2'
 ```
 
-If the version needed isn't tagged, the commit sha-1 can be used:
+If the version isn't tagged, the commit sha-1 can be used:
 
 ```bash
 cd test-submodule/
