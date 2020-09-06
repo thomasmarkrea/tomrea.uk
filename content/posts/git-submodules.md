@@ -4,7 +4,7 @@ description = "Git submodule cookbook"
 categories = []
 tags = ['Git']
 date = 2020-09-06T17:28:34+01:00
-draft = true
+draft = false
 +++
 
 Git submodules are not the most intuitive.
