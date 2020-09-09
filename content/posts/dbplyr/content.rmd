@@ -1,0 +1,136 @@
+---
+output:
+  md_document:
+    variant: commonmark
+---
+
+```{r include=FALSE}
+knitr::opts_chunk$set(
+  warning = FALSE,
+  message = FALSE,
+  error = FALSE
+)
+```
+
+Steps to get started with dplyr & Postgres, using dbplyr.
+
+## Postgres Setup
+
+[Don’t install Postgres. Docker pull Postgres](https://hackernoon.com/dont-install-postgres-docker-pull-postgres-bee20e200198)
+
+To avoid installing Postgres locally use Docker.
+
+Pull image for the latest stable release:
+
+```{bash eval=FALSE}
+docker pull postgres
+```
+
+Start Postgres:
+
+```{bash eval=FALSE}
+docker run \
+  -d --rm \
+  --name pg-docker \
+  -e POSTGRES_PASSWORD=docker \
+  -p 127.0.0.1:5432:5432 \
+  postgres
+```
+
+## db Connection
+
+### Setup
+
+The [DBI package](https://github.com/r-dbi/DBI) provides a simple interface for connecting to databases and, along with the [odbc package](https://github.com/r-dbi/odbc), makes it easy to set up connections to any with [Open Database Connectivity (ODBC)](https://docs.microsoft.com/en-us/sql/odbc/microsoft-open-database-connectivity-odbc?redirectedfrom=MSDN&view=sql-server-ver15) drivers.
+
+Install odbc dependencies and Postgres driver:
+
+```{bash eval=FALSE}
+sudo apt-get install unixodbc unixodbc-dev
+sudo apt-get install odbc-postgresql
+```
+
+Install DBI and odbc:
+
+```{r eval=FALSE}
+install.packages(c('DBI','odbc'))
+```
+
+Check odbc package can find Postgres driver:
+
+```{r}
+# list unique driver names
+unique(odbc::odbcListDrivers()['name'])
+```
+
+### Connection
+
+Connect to Postgres database:
+
+```{r}
+# load DBI package
+library(DBI)
+
+# create connection
+con <- dbConnect(
+  odbc::odbc(),
+  Driver = 'PostgreSQL Unicode',
+  Server = '127.0.0.1',
+  Database = 'postgres',
+  UID = 'postgres',
+  PWD = 'docker',
+  Port = 5432
+)
+```
+
+## dbplyr
+
+[Introduction to dbplyr](https://dbplyr.tidyverse.org/articles/dbplyr.html)
+
+Install tidyverse packages (and nycflights13 data):
+
+```{r eval=FALSE}
+install.packages(c('tidyverse', 'nycflights13'))
+```
+
+Use dbplyr to load nycflights13 data to database:
+
+```{r}
+# load tidyverse packages
+library(tidyverse)
+
+# copy data to database
+con %>%
+  copy_to(nycflights13::flights, 'flights')
+```
+
+dbplyr interacts with database tables through table references:
+
+```{r}
+# create table reference to 'flights' table
+flights <- tbl(con, 'flights')
+
+# return top of flights table
+head(flights)
+```
+
+Once a table reference has been created you can use dplyr to interrogate the table.
+
+dplyr tries to interact with the database as little as possible:
+
+```{r}
+# this will not touch the database
+flights_jfk <-
+  flights %>%
+  filter(origin == 'JFK')
+
+# this will
+flights_jfk %>%
+  ggplot() +
+  geom_boxplot(aes(carrier, distance))
+```
+
+```{bash include=FALSE}
+# clean up
+docker stop pg-docker
+```
