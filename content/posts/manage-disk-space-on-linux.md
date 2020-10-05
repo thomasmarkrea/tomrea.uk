@@ -4,7 +4,7 @@ description = "Two simple commands for managing disk space on Linux systems"
 categories = []
 tags = ['Linux']
 date = 2020-10-04T11:36:39+01:00
-draft = true
+draft = false
 +++
 
 Two simple commands for managing disk space on Linux systems.
