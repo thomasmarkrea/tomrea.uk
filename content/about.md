@@ -10,4 +10,4 @@ I have 10+ years experience working on customer insight in the live events indus
 
 Passionate about reproducible analysis and good documentation.
 
-[GitHub](https://github.com/thomasmarkrea/) | [Twitter](https://twitter.com/Thomasmarkrea) | [CV](https://docs.google.com/document/d/1NdS_QtoU8qwrcOks6tV96FUOw_rehXKpBGAE1kIuZP4/)
+[LinkedIn](https://linkedin.com/in/tom-rea/) | [GitHub](https://github.com/thomasmarkrea/) | [Twitter](https://twitter.com/Thomasmarkrea)
